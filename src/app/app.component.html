@@ -1,3 +1,14 @@
 <h1>
   {{title}}
 </h1>
+<form class="add-form" (ngSubmit)="submit($event)">
+    <input type="text" [(ngModel)]="newName" name="first" onclick="this.form.reset();">
+    <input type="submit" value="Add new board" >
+</form>
+<div>
+    <ul>
+        <li *ngFor="let board of boardArr">
+            {{board.boardName}}
+        </li>
+    </ul>
+</div>
