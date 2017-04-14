@@ -7,8 +7,13 @@
 </form>
 <div>
     <ul>
-        <li *ngFor="let board of boards">
-            {{board.boardName}}
+        <li *ngFor="let board of boards" (click)="onSelect(board)">
+          <a [routerLink]="['/board', board.id]">{{board.boardName}} </a>
+          
         </li>
+        
     </ul>
+    
 </div>
+
+<router-outlet></router-outlet>
