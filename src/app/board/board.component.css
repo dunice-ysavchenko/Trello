@@ -1,0 +1,23 @@
+h1{
+    color: cornflowerblue;
+    margin: 20px 20px;
+}
+
+.list-title{
+     float: left;
+     margin-bottom: 20px;
+     margin-left: 20px;
+     background-color: beige;
+     padding: 5px;
+     border-radius: 5px;
+}
+
+.newList{
+     margin-bottom: 20px;
+     margin-left: 20px;
+     background-color: beige;
+     padding: 10px;
+     border-radius: 5px;
+     
+     float: left;
+    }

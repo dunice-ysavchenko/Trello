@@ -1,19 +1,5 @@
 <h1>
   {{title}}
 </h1>
-<form class="add-form" (ngSubmit)="submit($event)">
-    <input type="text" [(ngModel)]="newName" name="first" onclick="this.form.reset();">
-    <input type="submit" value="Add new board" >
-</form>
-<div>
-    <ul>
-        <li *ngFor="let board of boards" (click)="onSelect(board)">
-          <a [routerLink]="['/board', board.id]">{{board.boardName}} </a>
-          
-        </li>
-        
-    </ul>
-    
-</div>
 
 <router-outlet></router-outlet>

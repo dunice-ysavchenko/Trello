@@ -1,0 +1,13 @@
+.add-form{
+    margin: 20px;
+}
+li{
+    list-style-type: none;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    width: 180px;
+    background-color: beige;
+    padding-left: 5px;
+    border-radius: 5px;
+
+}

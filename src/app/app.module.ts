@@ -6,11 +6,17 @@ import { BoardService } from './board/board.service'
 import { AppComponent } from './app.component';
 import { BoardComponent } from './board/board.component';
 import { RouterModule } from '@angular/router';
+import { BoardsComponent } from './boards/boards.component';
+import { ListComponent } from './list/list.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BoardComponent
+    BoardComponent,
+    BoardsComponent,
+    ListComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +24,11 @@ import { RouterModule } from '@angular/router';
     HttpModule,
     RouterModule.forRoot([
       {
-        path: 'board',
+        path: '',
+        component: BoardsComponent
+      },
+      {
+        path: 'board/:id',
         component: BoardComponent
       }
     ])
@@ -27,3 +37,21 @@ import { RouterModule } from '@angular/router';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+    // RouterModule.forRoot([
+    //   {
+    //     path: '', 
+    //     component: BoardsComponent,
+    //     children: [
+    //       {
+    //         path: 'board/:id',
+    //         component: BoardComponent
+    //       }
+    //     ]
+
+
+
+
+    //   }
+    // ])

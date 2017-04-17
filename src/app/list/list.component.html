@@ -1,0 +1,12 @@
+<p>{{list.listName}}</p>
+    <div class="card-title" *ngFor="let card of list.cards">
+        <card-component [card]="card"></card-component> 
+        
+      <!--  {{card.cardName}} -->
+    </div>
+    <div class="new-task">
+        <form class="add-task" (ngSubmit)="submit($event)">
+            <input type="text" [(ngModel)]="newTask" name="first" onclick="this.form.reset();">
+            <input type="submit" value="Add">
+        </form>
+    </div>
