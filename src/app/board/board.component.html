@@ -3,7 +3,7 @@
 <!-- вывод lists -->
 
 <div class="list-title" *ngFor="let list of lists">
-    <list-component [list]="list"></list-component>
+    <list-component [list]="list" (onDelete)="onDelete($event)"></list-component>
 <!--{{list.listName}}
     <div class="card-title" *ngFor="let card of list.cards">
         {{card.cardName}}
@@ -22,7 +22,7 @@
 </div>
 <!-- ++++++++++Добавление нового списка задач++++++++++ -->
 <div class="newList">
-    <form class="add-list" (ngSubmit)="submitList($event)">
+    <form class="add-list" (ngSubmit)="submit($event)">
         <input type="text" [(ngModel)]="newList" name="first" onclick="this.form.reset();">
         <input type="submit" value="Save">
     </form>

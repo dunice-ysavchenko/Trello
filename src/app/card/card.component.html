@@ -1,1 +1,3 @@
-<p>{{card.cardName}}</p>
+<div class="card-name" (click)="detailsCard()">{{card.cardName}}</div>
+<div class="delete" (click)="delete(card.id)">x</div>
+<modal-component *ngIf="detailsVisible" (isConfirmed)="closeModal($event)"></modal-component>

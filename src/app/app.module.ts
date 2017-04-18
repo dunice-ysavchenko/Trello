@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { BoardsComponent } from './boards/boards.component';
 import { ListComponent } from './list/list.component';
 import { CardComponent } from './card/card.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CardComponent } from './card/card.component';
     BoardComponent,
     BoardsComponent,
     ListComponent,
-    CardComponent
+    CardComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -37,21 +39,3 @@ import { CardComponent } from './card/card.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
-    // RouterModule.forRoot([
-    //   {
-    //     path: '', 
-    //     component: BoardsComponent,
-    //     children: [
-    //       {
-    //         path: 'board/:id',
-    //         component: BoardComponent
-    //       }
-    //     ]
-
-
-
-
-    //   }
-    // ])
