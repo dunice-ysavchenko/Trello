@@ -5,13 +5,6 @@ import { NgModule }      from '@angular/core';
 import {Routes, RouterModule, Router} from '@angular/router';
 import { BoardComponent } from './board/board.component';
 
-// RouterModule.forRoot([
-//   {
-//     path: 'board',
-//     component: BoardComponent
-//   }
-// ])
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -19,5 +12,6 @@ import { BoardComponent } from './board/board.component';
 })
 export class AppComponent  {
   title = 'Trello';
+  isModalDialogVisible = true;
 }
 

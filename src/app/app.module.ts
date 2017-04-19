@@ -10,6 +10,7 @@ import { BoardsComponent } from './boards/boards.component';
 import { ListComponent } from './list/list.component';
 import { CardComponent } from './card/card.component';
 import { ModalComponent } from './modal/modal.component';
+import { ModalService } from './modal/modal.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { ModalComponent } from './modal/modal.component';
       }
     ])
   ],
-  providers: [BoardService],
+  providers: [BoardService, ModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,8 @@
-<div class="card-name" (click)="detailsCard()">{{card.cardName}}</div>
+<div class="card-name" (click)="showToast(cardName,description)">{{card.cardName}}</div>
 <div class="delete" (click)="delete(card.id)">x</div>
-<modal-component *ngIf="detailsVisible" (isConfirmed)="closeModal($event)"></modal-component>
+
+<!--
+<modal-component *ngIf="isModalDialogVisible" [header]="cardName" [description]="cardDescription"
+              (isConfirmed)="closeModal($event)"></modal-component>
+
+-->

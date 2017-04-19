@@ -1,3 +1,13 @@
-<p>
-  modal works!
-</p>
+<div class="tiny-notification-panel">
+  <div *ngFor="let notification of notifications" class="tiny-notification">
+    <div class="header-block">
+      <h3 class="header-title">123</h3>
+      <a class="close-button" (click)="closeNotification(notification)">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div class="content">
+      <span>1234</span>
+    </div>
+  </div>
+</div>
