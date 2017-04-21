@@ -1,13 +1,19 @@
-<div class="tiny-notification-panel">
-  <div *ngFor="let notification of notifications" class="tiny-notification">
-    <div class="header-block">
-      <h3 class="header-title">123</h3>
-      <a class="close-button" (click)="closeNotification(notification)">
-        <i class="fa fa-times" aria-hidden="true"></i>
-      </a>
+<div *ngIf="card" class="background">
+  <div class="window">
+
+    <div class="header">
+      {{card.cardName}}
+      <div class="close" (click)="closeModal()">X</div>
     </div>
-    <div class="content">
-      <span>1234</span>
+    
+   <div class="description">Description: </div>
+      <div *ngIf="!editDescription; else elseBlock" class="description-text" (click)="editCardDescription()">
+      {{card.cardDescription}}
     </div>
+    <ng-template #elseBlock>
+      <textarea [(ngModel)]="card.cardDescription" rows="1" name="cardDescription" class="description-text-edit" autofocus rows="7" cols="35"> {{card.cardDescription}} </textarea>
+      <div (click)="saveCardDescription()" class="save-card-descriptoin">Save</div>
+    </ng-template>
+
   </div>
 </div>

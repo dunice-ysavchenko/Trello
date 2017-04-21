@@ -6,8 +6,16 @@ li{
     margin-bottom: 5px;
     border: 1px solid black;
     width: 180px;
-    background-color: beige;
+    background-color: white;
     padding-left: 5px;
     border-radius: 5px;
+    color: #505254;
 
+}
+.add-board{
+    background-color: #5db248;
+	color: white;
+}
+a{
+    color: #505254;
 }

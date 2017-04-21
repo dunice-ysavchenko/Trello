@@ -5,6 +5,8 @@
     margin-bottom: 7px;
     margin-right: 5px;
     padding-left: 5px;
+    cursor: default;
+    color: #505254;
 }
 .delete{
     float:right;
@@ -17,4 +19,24 @@
     float: right;
     cursor: pointer;
 
+}
+.edit-visible{
+    text-decoration:underline;
+    float: right;
+    width: 20px;
+    
+    cursor: pointer;
+}
+
+.save-card-name{
+    border: solid 1px darkgrey;
+    border-radius: 3px;
+    width: 40px;
+    text-align: center;
+    color: #505254;
+    background-color: #5db248;
+    margin-bottom: 5px;
+}
+.edit-card-name{
+    resize: none;
 }

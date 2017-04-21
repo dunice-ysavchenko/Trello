@@ -38,6 +38,8 @@ export class BoardComponent implements OnInit {
         this.boards = this._boardService.getBoards();
     }
 
+
+// добавление нового листа
     submit($event: Event) {
         $event.preventDefault();
 
@@ -45,7 +47,9 @@ export class BoardComponent implements OnInit {
         console.log(newList);
         let newID = +new Date();
         this.lists.push({ listName: this.newList, id: newID, cards: [] });
+        this.newList = '';
     }
+// получение списка листов и названия борда
     getLists() {
         for (let board of this.boards) {
             if (board.id == this.id) {
@@ -55,7 +59,7 @@ export class BoardComponent implements OnInit {
             }
         }
     }
-
+// удаление листа
     onDelete(listDelete) {
         console.log('id for delete: ', listDelete);
         let deleteIndex = this.lists.findIndex(function (obj) {

@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Lists } from '../list/list'
 import { CardComponent } from '../card/card.component';
+import { ListNameComponent } from '../list-name/list-name.component'
 
 @Component({
     selector: 'list-component',
@@ -10,10 +11,10 @@ import { CardComponent } from '../card/card.component';
 
 export class ListComponent {
     @Input() list: Lists;
-    @Output() onDelete = new EventEmitter<string | number>();
-    delete(cardDelete) {
-        this.onDelete.emit(cardDelete);
-        console.log(cardDelete);
+    @Output() onDelete = new EventEmitter<number>();
+    delete(listDelete) {
+        this.onDelete.emit(listDelete);
+        console.log(listDelete);
     }
     public newTask;
     submit($event: Event) {
@@ -23,6 +24,7 @@ export class ListComponent {
         let newID = +new Date();
         console.log(newID);
         this.list.cards.push({ cardName: this.newTask, id: newID, cardDescription: '' });
+        this.newTask = '';
 
     }
 

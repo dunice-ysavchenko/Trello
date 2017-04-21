@@ -1,17 +1,18 @@
 import {Injectable} from '@angular/core';
 import { Subject } from "rxjs";
-import { ModalModel } from "./modal.model";
+
 
 
 @Injectable()
 export class ModalService {
-    private notifications: Subject<ModalModel> = new Subject<ModalModel>();
+    notifications: Subject<any> = new Subject<any>();
 
-	public getNotification(): Subject<ModalModel> {
+	public getNotification(): Subject<any> {
 		return this.notifications;
 	}
 
-	public showToast(info: ModalModel) {
+	public showToast(info: any) {
+		console.log('info', info);
 		this.notifications.next(info);
 	}
 }

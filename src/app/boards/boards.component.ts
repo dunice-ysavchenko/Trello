@@ -10,22 +10,21 @@ import { Board } from '../board/board';
 })
 export class BoardsComponent implements OnInit {
   boards: Board[];
-  public selectedBoard: Board;
-  public newName;
+   public newName;
 
+// add new board
   submit($event: Event) {
     $event.preventDefault();
-
     let newName = this.newName.trim();
     let newID = +new Date();
     this.boards.push({ boardName: this.newName, id: newID, lists: []});
+    this.newName = '';
   }
 
-  onSelect(board: Board) {
-    this.selectedBoard = board;
-  };
+ 
   constructor(private _boardService: BoardService) { }
 
+//get data from array
   ngOnInit() {
     this.getBoards();
   }

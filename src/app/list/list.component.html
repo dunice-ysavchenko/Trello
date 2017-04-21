@@ -1,11 +1,11 @@
-<div class="list-name">{{list.listName}}</div>
-<div class="delete" (click)="delete(list.id)">x</div>
+<div class="list-name"><list-name-component [list]="list.listName"></list-name-component></div>
+<div class="delete" (click)="delete(list.id)">X</div>
 <div class="card-title" *ngFor="let card of list.cards">
     <card-component [card]="card" (onDeleteCard)="onDeleteCard($event)"></card-component>
 </div>
 <div class="new-task">
     <form class="add-task" (ngSubmit)="submit($event)">
-        <input type="text" [(ngModel)]="newTask" name="first" onclick="this.form.reset();">
-        <input type="submit" value="Add">
+        <input type="text" [(ngModel)]="newTask" name="first">
+        <input type="submit" value="Add" class="add-card" >
     </form>
 </div>

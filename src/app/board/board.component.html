@@ -4,26 +4,11 @@
 
 <div class="list-title" *ngFor="let list of lists">
     <list-component [list]="list" (onDelete)="onDelete($event)"></list-component>
-<!--{{list.listName}}
-    <div class="card-title" *ngFor="let card of list.cards">
-        {{card.cardName}}
-    </div>
-    <div class="new-task">
-        <form class="add-task" (ngSubmit)="submit($event)">
-            <input type="text" [(ngModel)]="newTask" name="first" onclick="this.form.reset();">
-            <input type="submit" value="Add">
-        </form>
-    </div>
-
-
-
-
-</div> -->
 </div>
-<!-- ++++++++++Добавление нового списка задач++++++++++ -->
+<!-- ++++++++++Добавление нового list++++++++++ -->
 <div class="newList">
     <form class="add-list" (ngSubmit)="submit($event)">
-        <input type="text" [(ngModel)]="newList" name="first" onclick="this.form.reset();">
-        <input type="submit" value="Save">
+        <input type="text" [(ngModel)]="newList" name="first" >
+        <input type="submit" value="Save" class="save-list">
     </form>
 </div>

@@ -1,8 +1,9 @@
+<div> 
 <h1>
   {{title}}
 </h1>
 
 <router-outlet></router-outlet>
 
-<modal-component *ngIf="isModalDialogVisible" [header]="cardName" [description]="cardDescription"
-              (isConfirmed)="closeModal($event)"></modal-component>
+<modal-component></modal-component>
+</div>

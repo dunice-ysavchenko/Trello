@@ -11,6 +11,7 @@ import { ListComponent } from './list/list.component';
 import { CardComponent } from './card/card.component';
 import { ModalComponent } from './modal/modal.component';
 import { ModalService } from './modal/modal.service';
+import { ListNameComponent } from './list-name/list-name.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ModalService } from './modal/modal.service';
     BoardsComponent,
     ListComponent,
     CardComponent,
-    ModalComponent
+    ModalComponent,
+    ListNameComponent
   ],
   imports: [
     BrowserModule,

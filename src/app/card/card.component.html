@@ -1,8 +1,8 @@
-<div class="card-name" (click)="showToast(cardName,description)">{{card.cardName}}</div>
-<div class="delete" (click)="delete(card.id)">x</div>
-
-<!--
-<modal-component *ngIf="isModalDialogVisible" [header]="cardName" [description]="cardDescription"
-              (isConfirmed)="closeModal($event)"></modal-component>
-
--->
+<div class="card-name" *ngIf="!edit; else elseBlock" (click)="showToast(card)">{{card.cardName}}
+    <div class="edit-visible" (click)="editCardName()">&#9998;</div>
+</div>
+<div class=" delete " (click)="delete(card.id) ">x</div>
+<ng-template #elseBlock>
+    <textarea [(ngModel)]="card.cardName " rows="2" name="card" class="edit-card-name"> {{card.cardName}} </textarea>
+    <div (click)="saveCardName()" class="save-card-name">Save</div>
+</ng-template>

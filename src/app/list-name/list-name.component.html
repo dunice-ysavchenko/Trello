@@ -1,0 +1,4 @@
+<div *ngIf="!edit; else elseBlock" class="name">{{list}}</div>
+<ng-template #elseBlock>
+  <textarea [(ngModel)]="list" rows="1" name="list"> {{list}} </textarea>
+</ng-template>
